@@ -31,12 +31,20 @@ while (ronde <= 5) {
         alert(`Tebakan Player 2 benar. \nAngka: ${angka}`);
         scoreP2++;
     } else {
-        alert("Tidak ada tebakan yang benar.")
+        alert("Tidak ada tebakan yang benar.");
     }
 
-    alert(`Player 1: ${scoreP1} \nPlayer 2: ${scoreP2}`)
+    alert(`Skor \nPlayer 1: ${scoreP1} \nPlayer 2: ${scoreP2}`);
 
     ronde++;
+}
+
+if (scoreP1 > scoreP2){
+    alert("Player 1 menang!");
+} else if (scoreP2 > scoreP1){
+    alert("Player 2 menang!");
+} else {
+    alert("Seri!");
 }
 
 // Fungsi untuk memastikan input yang diberikan bukanlah huruf atau angka yang diluar 1-3
@@ -54,6 +62,7 @@ function validator(input1, input2) {
     }
 }
 
+// Menghasilkan angka acak dari 1 sampai 3
 function randomNum() {
     return Math.floor(Math.random() * 3) + 1;
 }
